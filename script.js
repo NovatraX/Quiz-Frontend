@@ -9,7 +9,7 @@ import {
 } from './utils.js';
 
 // Constants
-const API_BASE = 'https://qapi-xbw7.onrender.com/';
+const API_BASE = 'https://quiz-api-xv71.onrender.com/';
 const SKELETON_COUNT = 9;
 
 // DOM element cache
