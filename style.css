@@ -1,0 +1,348 @@
+* {
+  box-sizing: border-box;
+}
+
+.btn {
+  height: auto !important;
+  padding: 0.5rem !important;
+}
+
+.option {
+  display: block !important;
+  padding-left: 20px !important;
+}
+
+#bookmark-button {
+  padding-inline: 0.75rem !important;
+}
+
+.timer-container i {
+  font-size: large;
+}
+
+@media (max-width: 768px) { /* Adjust the max-width as needed for your mobile breakpoint */
+  .p-6 {
+    padding: 1rem !important;
+  }
+  .p-5 {
+    padding: 0.75rem !important;
+  }
+  .p-4 {
+    padding: 0.5rem !important;
+  }
+  aside {
+    margin-bottom: 0 !important;
+  }
+  .border {
+    border: 0 !important;
+  }
+  .feedback {
+    padding: 7.5px !important;
+  }
+  .app-container {
+      padding: 0 !important; /* Use !important if you want to override other styles */
+  }
+  #breadcrumb-topic:hover, #breadcrumb-chapter:hover, #breadcrumb-subject:hover {
+    transform: scale(1.05); /* Set hover scale to 1.05 for mobile devices */
+  }
+  .navigation-buttons {
+    margin: 1.25rem !important;
+  }
+  header, section, .rounded-xl {
+    border-radius: 0 !important;
+  }
+  h2 {
+    white-space: nowrap; /* Prevents the heading from wrapping to the next line */
+    overflow: visible; /* Ensures overflow is visible */
+    font-size: calc(1rem + 2vw); /* Responsive font size that adjusts based on viewport width */
+    width: 100%; /* Ensures the heading takes the full width of the container */
+    display: inline-block; /* Allows the heading to resize without wrapping */
+  }
+  #question-list-container {
+    margin-left: 0.5rem;
+  }
+  .bookmark-text {
+    display: none;
+  }
+}
+
+.theme-toggle {
+  background: transparent;
+  border: none;
+  transition: color 0.3s ease;
+  max-width: fit-content;
+}
+
+img, video {
+  width: -webkit-fill-available;
+  width: -moz-available;
+  border-radius: 10px;
+}
+
+img:hover {
+  transform: scale(1.025);
+}
+
+.question-content {
+  margin-bottom: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.answer-options {
+  transition: background-color 0.3s ease;
+}
+
+.option {
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  text-align: left;
+  font-size: 1.1em;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  height: auto;
+}
+
+.option.selected {
+  border-color: #bb00ff !important;
+  color: #bb00ff !important;
+}
+
+.option.correct {
+  color: #38a53d !important;
+  border-color: #38a53d !important;
+}
+
+.option.incorrect {
+  border-color: #b71c1c !important;
+  color: #b71c1c !important;
+}
+
+#integer-input-container {
+  margin-bottom: 15px;
+}
+
+#answer-input-field {
+  margin: 10px 0;
+  font-size: 1.1em;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.feedback {
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+#paper-title {
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.MathJax {
+  display: inline !important;
+}
+
+.question-item {
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  min-width: 80px;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.question-item.active {
+  color: #388e3c;
+}
+
+.question-item.correct-item {
+  color: #1b5e20;
+}
+
+.question-item.incorrect-item {
+  color: #b71c1c;
+}
+
+.question-item i {
+  margin-left: 5px;
+  font-size: 18px;
+}
+
+#submit-answer-button {
+  width: auto;
+  font-size: 1.2em;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+@media (min-width: 1024px) {
+  .app-container {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+  }
+
+  #question-sidebar {
+    position: sticky;
+    top: 1rem;
+    max-height: calc(100vh - 5rem);
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-bottom: 0;
+    width: 30vw;
+  }
+
+  .content-area {
+    width: 65vw;
+  }
+
+  .app-container > main {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  #question-list-container {
+    flex-wrap: wrap;
+  }
+
+  .answer-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
+
+.subject-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.subject-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.subject-card .icon-container {
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+
+.card {
+  display: flow;
+  overflow-x: auto;
+}
+
+.card-error,
+.card-success {
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  line-height: 2;
+}
+
+mjx-container mjx-math {
+  line-height: .5;
+  white-space: normal;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+}
+
+.skeleton {
+  background: #f6f7f8;
+  background-image: linear-gradient(
+    to right,
+    #f6f7f8 0%,
+    #cfcece 20%,
+    #f6f7f8 40%,
+    #f6f7f8 100%
+  );
+  animation: shimmer 1.5s infinite linear;
+}
+
+.skeleton-subject {
+  height: 120px;
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.skeleton-chapter,
+.skeleton-topic {
+  height: 50px;
+  border-radius: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.skeleton-question {
+  height: 200px;
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.skeleton-option {
+  height: 50px;
+  border-radius: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.skeleton-sidebar {
+  height: 100%;
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.skeleton-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background: #f6f7f8;
+  background-image: linear-gradient(
+    to right,
+    #f6f7f8 0%,
+    #cfcece 20%,
+    #f6f7f8 40%,
+    #f6f7f8 100%
+  );
+  animation: shimmer 1.5s infinite linear;
+}
+
+.dark .skeleton {
+  background: #2d3748;
+  background-image: linear-gradient(
+    to right,
+    #2d3748 0%,
+    #4a5568 20%,
+    #2d3748 40%,
+    #2d3748 100%
+  );
+}
+
+.breadcrumbs>ol>li+:before, .breadcrumbs>ul>li+:before {
+  opacity: 1;
+  border-top: 2px solid;
+  border-right: 2px solid;
+}
+
